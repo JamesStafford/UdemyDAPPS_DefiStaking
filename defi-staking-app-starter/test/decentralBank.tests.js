@@ -10,7 +10,7 @@ contract('decentralBank', (accounts) => {
     describe('Mock Tether Deployment', async () => {
         it('matches name successfully', async () => {
             let tether = await Tether.new();
-            const name = tether.name();
+            const name = await tether.name();
             assert.equal(name, 'Mock Tether');
         });
     });
